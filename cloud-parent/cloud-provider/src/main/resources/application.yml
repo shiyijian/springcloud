@@ -1,0 +1,44 @@
+server:
+  port: 9001
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
+
+spring:
+  application:
+    name: cloud-provider
+  #profiles: daily
+  datasource:
+    name: test
+    url: jdbc:mysql://daily.db.mockuai.com:3306/jmxy_db?useUnicode=true&autoReconnect=true
+    username: mk_dev
+    password: mk123
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    filters: stat
+    maxActive: 500
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 50
+    connectionInitSqls: set names utf8mb4
+    connectionProperties: character_set_client=utf8mb4;character_set_connection=utf8mb4
+  data:
+    mongodb:
+      host: 10.10.10.13
+      port: 27017
+      database: jmxy_mongodb
+      username: mongo
+      password: pwd222
+      authentication-database: admin
+mybatis:
+  mapper-locations: classpath*:sqlmap/*.xml
+  type-aliases-package: com.web.cloud.common.model

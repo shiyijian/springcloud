@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: cloud-feign
+server:
+  port: 8091
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
+feign:
+  hystrix:
+    enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
+
+cloud-provider:
+  ribbon:
+    ConnectTimeout: 3000
+    ReadTimeout: 5000
+    OkToRetryOnAllOperations: true
+    MaxAutoRetriesNextServer: 1
+    MaxAutoRetries: 1

@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: cloud-zuul
+server:
+  port: 8092
+zuul:
+  routes:
+    cloud:
+      path: /cloud/**
+      serviceId: cloud-feign
+  host:
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 10000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/

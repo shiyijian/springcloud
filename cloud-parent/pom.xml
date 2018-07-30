@@ -10,6 +10,10 @@
     <version>0.0.1</version>
     <modules>
         <module>cloud-eureka</module>
+        <module>cloud-zuul</module>
+        <module>cloud-common</module>
+        <module>cloud-feign</module>
+        <module>cloud-provider</module>
     </modules>
 
     <parent>

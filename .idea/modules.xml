@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/cloud-parent/cloud-common/cloud-common.iml" filepath="$PROJECT_DIR$/cloud-parent/cloud-common/cloud-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-parent/cloud-eureka/cloud-eureka.iml" filepath="$PROJECT_DIR$/cloud-parent/cloud-eureka/cloud-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-parent/cloud-feign/cloud-feign.iml" filepath="$PROJECT_DIR$/cloud-parent/cloud-feign/cloud-feign.iml" />
       <module fileurl="file://$PROJECT_DIR$/cloud-parent/cloud-parent.iml" filepath="$PROJECT_DIR$/cloud-parent/cloud-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-parent/cloud-provider/cloud-provider.iml" filepath="$PROJECT_DIR$/cloud-parent/cloud-provider/cloud-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud-parent/cloud-zuul/cloud-zuul.iml" filepath="$PROJECT_DIR$/cloud-parent/cloud-zuul/cloud-zuul.iml" />
     </modules>
   </component>
 </project>
